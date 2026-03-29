@@ -1,5 +1,7 @@
 # Runbook — BLAST Test Planner
 
+> **Vercel (read this if deploy fails):** In the Vercel project, set **Root Directory** to **`web`**. If it stays at the repository root, install will not get Next.js (`node_modules` empty for the app) and the build fails. Optional: set **Node.js Version** to **20.x** (see `web/.nvmrc`).
+
 The application is a **single Next.js 15 (TypeScript) project** under [`web/`](web/). Frontend and API routes are **both Node.js** on the same deployment—suited for **Vercel**.
 
 ## Local development
@@ -95,3 +97,11 @@ The canonical outline for the running app is [`web/data/template_outline.json`](
 ### Generate timeouts on Vercel
 
 - See **Serverless duration** above; Hobby limits may be too low for 12 LLM round-trips.
+
+### Build log shows `next: not found` or “Cannot find module ‘next’”
+
+- **Root Directory** is almost certainly **not** `web`. Fix in Vercel → Project → Settings → General → *Root Directory*.
+
+### Build log shows ESLint / plugin errors only on Vercel
+
+- This repo sets `eslint.ignoreDuringBuilds: true` in [`web/next.config.ts`](web/next.config.ts) so production builds do not fail on lint drift. Run `npm run lint` locally when developing.
