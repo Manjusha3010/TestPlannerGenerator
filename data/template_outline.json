@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "source": "Test Plan - Template.docx",
+  "sections": [
+    {
+      "id": "objective",
+      "title": "Objective",
+      "order": 1,
+      "llm_guidance": "State the singular quality goal for the feature under test. Reference the Jira summary and description only."
+    },
+    {
+      "id": "scope",
+      "title": "Scope",
+      "order": 2,
+      "llm_guidance": "Define in-scope testing types (functional, API, UI, regression, etc.) implied by the ticket. Do not copy unrelated product examples."
+    },
+    {
+      "id": "inclusions",
+      "title": "Inclusions",
+      "order": 3,
+      "llm_guidance": "List concrete scenarios, flows, or acceptance areas to cover based on the ticket."
+    },
+    {
+      "id": "test_environments",
+      "title": "Test Environments",
+      "order": 4,
+      "llm_guidance": "Describe environments needed (browsers, OS, APIs, test data). Use placeholders if unknown."
+    },
+    {
+      "id": "defect_reporting",
+      "title": "Defect Reporting Procedure",
+      "order": 5,
+      "llm_guidance": "How defects are logged (Jira project, severity, attachments). Generic SOP acceptable."
+    },
+    {
+      "id": "test_strategy",
+      "title": "Test Strategy",
+      "order": 6,
+      "llm_guidance": "High-level approach: levels of testing, automation vs manual, risk focus from ticket."
+    },
+    {
+      "id": "test_schedule",
+      "title": "Test Schedule",
+      "order": 7,
+      "llm_guidance": "Milestone-style table or bullets; use TBD dates if not specified."
+    },
+    {
+      "id": "test_deliverables",
+      "title": "Test Deliverables",
+      "order": 8,
+      "llm_guidance": "Artifacts: test cases, reports, evidence, sign-off."
+    },
+    {
+      "id": "entry_exit",
+      "title": "Entry and Exit Criteria",
+      "order": 9,
+      "llm_guidance": "Include subsections for overall, test execution, and test closure entry/exit criteria as bullet lists."
+    },
+    {
+      "id": "tools",
+      "title": "Tools",
+      "order": 10,
+      "llm_guidance": "Testing tools (Jira, X-Ray if relevant, automation frameworks) as applicable."
+    },
+    {
+      "id": "risks",
+      "title": "Risks and Mitigations",
+      "order": 11,
+      "llm_guidance": "Risks tied to the feature and mitigations."
+    },
+    {
+      "id": "approvals",
+      "title": "Approvals",
+      "order": 12,
+      "llm_guidance": "Table or list: Role | Name | Signature | Date — use TBD."
+    }
+  ]
+}

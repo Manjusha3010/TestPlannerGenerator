@@ -1,0 +1,11 @@
+.env
+.tmp/
+.tmp_docx_extract/
+node_modules/
+web/node_modules/
+web/.next/
+web/out/
+*.pyc
+.python-version
+.venv/
+venv/
