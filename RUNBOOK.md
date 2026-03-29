@@ -34,7 +34,35 @@ API routes are served at the same origin (e.g. `POST /api/generate`).
 4. Framework preset: **Next.js** (auto-detected). Build: `npm run build`, Output: default.
 5. Deploy. Production URL will serve the wizard and `/api/*` routes.
 
+[`web/vercel.json`](web/vercel.json) pins the framework and build so Vercel behaves consistently with this repo.
+
 Optional env vars (only if you add server-side defaults later); the UI currently sends Jira/LLM/Confluence credentials per request.
+
+### Vercel CLI: `link` and `pull` (local env / project sync)
+
+Use this when you want **`.env.local`** filled from the Vercel project (or to attach the CLI to the same GitHub deploy).
+
+From repo root:
+
+```powershell
+cd web
+npm install
+npx vercel login
+npx vercel link
+npx vercel pull --yes
+```
+
+Or use the shortcuts after `npm install` inside `web/`:
+
+```powershell
+npm run vercel:link
+npm run vercel:pull
+```
+
+- **`vercel link`** — choose your team and the **TestPlannerGenerator** / Next.js project (root directory should already be `web` on the Vercel dashboard).
+- **`vercel pull`** — writes **`.env.local`** (and **`.vercel/project.json`**). Those paths are **gitignored**; do not commit secrets.
+
+From the **repo root** you can run `npm run vercel:link` and `npm run vercel:pull` if you prefer.
 
 ### Serverless duration
 
